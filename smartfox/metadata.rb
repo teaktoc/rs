@@ -6,6 +6,11 @@ description      'Installs/Configures smartfox'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
+
+depends "rightscale"
+
+recipe "smartfox:install_license_server", "Installs and configures SmartFox Pro License Server"
+
 attribute "smartfox/storage_account_id",
   :description => "API public key of storage provider (s3, cloudfiles, ...)",
   :recipes     => ["smartfox::install", "smartfox::install_license_server"],
