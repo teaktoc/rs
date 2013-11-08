@@ -9,7 +9,7 @@ version          '0.1.0'
 
 depends "rightscale"
 
-recipe "smartfox:install_license_server", "Installs and configures SmartFox Pro License Server"
+recipe "smartfox::install_license_server", "Installs and configures SmartFox Pro License Server"
 
 attribute "smartfox/storage_account_id",
   :description => "API public key of storage provider (s3, cloudfiles, ...)",
