@@ -4,7 +4,7 @@ bash "download_smartfox" do
   code <<-EOM
     export STORAGE_ACCOUNT_ID="#{node[:smartfox][:storage_account_id]}"
     export STORAGE_ACCOUNT_SECRET="#{node[:smartfox][:storage_account_secret]}"
-    /opt/rightscale/sandbox/bin/ros_util get -c "#{node[:smartfox][:bucket]}" -s "#{node[:smartfox][:file]}" -C "#{node[:smartfox][:provider]}" -d "#{Chef::Config[:file_cache_path]}/smartfox.tar.gz"
+    /opt/rightscale/sandbox/bin/ros_util get -c "#{node[:smartfox][:bucket]}" -s "#{node[:smartfox][:file]}" -C "s3" -d "#{Chef::Config[:file_cache_path]}/smartfox.tar.gz"
   EOM
 end
 
