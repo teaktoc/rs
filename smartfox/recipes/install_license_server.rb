@@ -12,12 +12,13 @@ bash "untar_smartfox" do
   code <<-EOM
    tar zxvf "#{Chef::Config[:file_cache_path]}/smartfox.tar.gz" -C /usr/local
    ln -s /usr/local/SFS_PRO_1.6.6 /usr/local/smartfox
+   ln -s /usr/local/sfsls-linux-x86-64 /usr/local/smartfox
  EOM
 end
 
 bash "start_smartfox" do
   code <<-EOM
-    /usr/local/smartfox/Server/start.sh
+    /usr/local/smartfox/sfsls start
   EOM
 end
     
