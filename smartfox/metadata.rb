@@ -14,28 +14,28 @@ recipe "smartfox::install_client", "Install SmartFox game server client"
 
 attribute "smartfox/storage_account_id",
   :description => "API public key of storage provider (s3, cloudfiles, ...)",
-  :recipes     => ["smartfox::install", "smartfox::install_license_server"],
+  :recipes     => ["smartfox::install_client", "smartfox::install_license_server"],
   :type        => "string",
   :display     => "smartfox/storage_account_id",
   :required    => "required"
 
 attribute "smartfox/storage_account_secret",
   :description => "API private key of storage provider (s3, cloudfiles, ...)",
-  :recipes     => ["smartfox::install", "smartfox::install_license_server"],
+  :recipes     => ["smartfox::install_client", "smartfox::install_license_server"],
   :type        => "string",
   :display     => "smartfox/storage_account_secret",
   :required    => "required"
 
 attribute "smartfox/bucket",
   :description => "Bucket name where Smartfox is stored",
-  :recipes     => ["smartfox::install", "smartfox::install_license_server"],
+  :recipes     => ["smartfox::install_client", "smartfox::install_license_server"],
   :type        => "string",
   :display     => "smartfox/bucket",
   :required    => "required"
 
 attribute "smartfox/file",
   :description => "Path to file in container",
-  :recipes     => ["smartfox::install", "smartfox::install_license_server"],
+  :recipes     => ["smartfox::install_client", "smartfox::install_license_server"],
   :type        => "string",
   :display     => "smartfox/bucket",
   :required    => "required"
