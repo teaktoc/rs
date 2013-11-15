@@ -11,12 +11,12 @@ end
 bash "untar_smartfox" do
   code <<-EOM
    tar zxvf "#{Chef::Config[:file_cache_path]}/smartfox.tar.gz" -C /usr/local
-   ln -s /usr/localSFS_PRO_1.6.6 /usr/local/smartfox
+   ln -s /usr/local/SFS_PRO_1.6.6 /usr/local/smartfox
  EOM
 end
 
 template "/usr/local/smartfox/Server/config.xml" do
-  source "config.xml"
+  source "config.xml.erb"
   owner "root"
   group "root"
   mode "0444"
