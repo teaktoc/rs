@@ -30,7 +30,7 @@ end
 bash "start_smartfox" do
   flags "-ex"
   code <<-EOM
-    /usr/local/smartfox/Server/sfsls start
+    /usr/local/smartfox/Server/start.sh
   EOM
 end
     
