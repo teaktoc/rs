@@ -29,6 +29,7 @@ end
 
 bash "start_smartfox" do
   flags "-ex"
+  cwd "/usr/local/smartfox/Server"
   code <<-EOM
     /usr/local/smartfox/Server/start.sh
   EOM
