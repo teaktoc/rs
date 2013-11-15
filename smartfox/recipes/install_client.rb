@@ -28,6 +28,7 @@ template "/usr/local/smartfox/Server/config.xml" do
 end
 
 bash "start_smartfox" do
+  flags "-ex"
   code <<-EOM
     /usr/local/smartfox/Server/sfsls start
   EOM
